@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Password Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="password-container">
+    <h1>Advanced Password Generator</h1>
+
+    <!-- Password Input -->
+    <div class="input-container">
+      <input class="input" type="text" id="input" readonly placeholder="Create Password">
+      <i class="fa-regular fa-copy" id="copy-icon"></i>
+    </div>
+
+    <!-- Length Slider -->
+    <label for="length">
+      Password Length: <span id="lengthValue">12</span>
+    </label>
+    <input type="range" id="length" min="8" max="32" value="12">
+
+    <!-- Options Checkboxes -->
+    <div class="options">
+      <label><input type="checkbox" id="include-numbers" checked> Include Numbers</label>
+      <label><input type="checkbox" id="include-symbols" checked> Include Symbols</label>
+    </div>
+
+    <!-- Generate Button -->
+    <button class="btn" id="generate-password">Generate Password</button>
+
+    <!-- Strength Meter -->
+    <div class="strength-container">
+      <div id="strength-bar"></div>
+    </div>
+
+    <!-- Dark/Light Mode Toggle -->
+    <button id="theme-toggle" class="theme-btn">Toggle Dark/Light Mode</button>
+  </div>
+
+  <!-- Copy Alert -->
+  <div class="alert-container">
+    Password copied!
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
